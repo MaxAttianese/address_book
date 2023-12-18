@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Css-->
+    <!--<link rel="stylesheet" href="./address_book.css">-->
+    <!--Telephone icon-->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">-->
+    <title>Rubrica</title>
+</head>
+<body>
+    <header>
+        <!--importata icona con relativo link con lo stylesheet che le permette di funzionare, chiusa in un div che successivamente stilizzerò per dargli lo style richiesto-->
+        <!--<div>
+            <i class="fa-solid fa-phone-flip"></i>
+        </div>-->
+        <h1>Rubrica</h1>
+    </header>
+    <main>
+        <table>
+            <tr>
+                <th>
+                    <h2>Id</h2>
+                </th>
+                <th>
+                    <h2>Nome</h2>
+                </th>
+                <th>
+                    <h2>Cognome</h2>
+                </th>
+            </tr>
+            <!--Modo per rendere l'intera riga un link che porta alla pagina personale della specifica persona-->
+            <tr onclick="location.href='./pages/id1_pp.html'">
+                <td><h3>1</h3></td>
+                <td>
+                    <h3>Max</h3>
+                </td>
+                <td>
+                    <h3>Attianese</h3>
+                </td>
+            </tr>
+            <!--Nel caso non è quella precedente la soluzione a seguire qualche altra soluzione-->
+            <!--Rendere tutte le parole della riga un link-->
+            <tr>
+                <td><a href="./pages/id2_pp.html"><h3>2</h3></a></td>
+                <td>
+                    <a href="./pages/id2_pp.html"><h3>Daniel</h3></a>
+                </td>
+                <td>
+                    <a href="./pages/id2_pp.html"><h3>Zotti</h3></a>
+                </td>
+            </tr>
+            <!--Rendere una sola delle parole un link-->
+            <tr>
+                <td><h3>3</h3></td>
+                <td>
+                    <h3>Walther</h3>
+                </td>
+                <td>
+                    <a href="#"><h3>Flemming</h3></a>
+                </td>
+            </tr>
+            <tr>
+                <td><h3>4</h3></td>
+                <td>
+                    <h3>Antoine</h3>
+                </td>
+                <td>
+                    <h3>Lavoisier</h3>
+                </td>
+            </tr>
+            <tr>
+                <td><h3>5</h3></td>
+                <td>
+                    <h3>Isaac</h3>
+                </td>
+                <td>
+                    <h3>Newton</h3>
+                </td>
+            </tr>
+            <tr>
+                <td><h3>6</h3></td>
+                <td>
+                    <h3>Charles</h3>
+                </td>
+                <td>
+                    <h3>Darwin</h3>
+                </td>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <p>
+            Talent Academy | Front-end Basics
+        </p>
+    </footer>
+    <!--Javascript-->
+    <!--<script src="./address_book.js"></script>-->
+</body>
+</html>
