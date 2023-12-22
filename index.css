@@ -36,6 +36,7 @@ header {
     border-radius: 6px;
     color: #005B96;
     display: flex;
+    font-size: 32px;
     height: 40px;
     justify-content: center;
     width: 49px;
