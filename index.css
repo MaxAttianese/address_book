@@ -11,7 +11,7 @@
     /*Dark*/
     --background-dark-color: #333;
     --circle-dark-color: #F2C6B6;
-    --dark-dark-color: #B30018;
+    --dark-dark-color: #BF1F2C;
     --hover-dark-color: #D99B84;
     --main-dark-color: #B33646;
     --text-dark-color: #fff;
@@ -23,11 +23,13 @@ GENERAL
 * {
     box-sizing: 0;
     margin: 0;
+    outline: none;
     padding: 0;
 }
 
 html {
     font-size: 10px;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -63,8 +65,9 @@ HEADER
     align-items: center;
     background-color: var(--dark-light-color);
     border-radius: 4px;
-    color: #fff;
+    color: var(--background-light-color);
     display: flex;
+    font-family: "Lobster", serif;
     height: 6.5rem;
     gap: 0.8rem;
     justify-content: center;
@@ -148,7 +151,7 @@ th {
 }
 
 
-.circle-id a {
+.circle-id,.icon-container-sm a {
     font-weight: bold;
 }
 
@@ -195,9 +198,6 @@ HEADER DARK MODE
     background-color: var(--dark-dark-color);
 }
 
-.icon-container-dark-mode {
-    background-color: var(--text-dark-color);
-}
 .icon-container-dark-mode i {
     color: var(--dark-dark-color);
 }
@@ -228,4 +228,104 @@ tr:hover .circle-id-dark-mode {
 
 .btn-dark {
     color: var(--background-light-color);
+}
+
+/*//////////////////////////////////////////////
+MEDIA QUERIES - SMARTPHONE VIEW
+//////////////////////////////////////////////*/
+.card-section {
+    display: none;
+    padding: 0 2rem;
+}
+
+.card-people {
+    align-items: center;
+    background-color: var(--dark-light-color);
+    border-radius: 8px;
+    color: var(--text-dark-color);
+    display: flex;
+    justify-self: center;
+    padding: 1.2rem 2.4rem;
+    width: 85%;
+}
+
+.card-people:hover {
+    background-color: var(--main-light-color);
+}
+
+.icon-container-sm {
+    align-items: center;
+    background-image: url('./img/favicon/favicon-address-book\ desktop.png');
+    background-size: contain;
+    border-radius: 50%;
+    color: black;
+    display: flex;
+    height: 4.4rem;
+    justify-content: center;
+    margin-right: 1.2rem;
+    width: 4.4rem;
+}
+
+.link-container {
+    align-items: center;
+    background-color: var(--dark-light-color);
+    border-radius: 50%;
+    color: var(--text-dark-color);
+    display: none;
+    font-size: 3.2rem;
+    font-weight: 900;
+    height: 100%;
+    justify-content: center;
+    opacity: 0.85;
+    width: 100%;
+}
+
+.card-people:hover .link-container  {
+    display: flex;
+}
+
+.card-firstname {
+    font-weight:100;
+
+}
+
+
+@media (max-width: 38em) {
+    .table-border {
+        display: none;
+    }
+
+    .card-section {
+        display: grid;
+        gap: 4.8rem;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+}
+
+@media (max-width: 30em) {
+    .card-section {
+        gap: 4.4rem;
+        grid-template-columns: 1fr;
+    }
+
+    .card-people {
+        padding: 1.6rem;
+    }
+}
+
+/*//////////////////////////////////////////////
+DARK MODE - SMARTPHONE VIEW
+//////////////////////////////////////////////*/
+
+.card-people-dark {
+    background-color: var(--dark-dark-color);
+}
+
+.card-people-dark:hover {
+    background-color: var(--main-dark-color) !important;
+}
+
+.link-container-dark {
+    background-color: var(--dark-dark-color) !important;
 }
