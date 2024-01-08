@@ -1,0 +1,18 @@
+:root {
+
+    /*Light*/
+    --white: #fff;
+    --circle-light-color: rgb(249, 205, 7);
+    --dark-light-color: #005B96;
+    --hover-light-color: rgb(248, 244, 26);
+    --main-light-color: rgb(208, 230, 251);
+    --text-light-color: #555;
+
+    /*Dark*/
+    --lighten-black: #333;
+    --circle-dark-color: #F2C6B6;
+    --dark-dark-color: #BF1F2C;
+    --hover-dark-color: #D99B84;
+    --main-dark-color: #B33646;
+    --text-dark-color: #fff;
+}

@@ -1,54 +1,16 @@
-:root {
-
-    /*Light*/
-    --background-light-color: #fff;
-    --circle-light-color: rgb(249, 205, 7);
-    --dark-light-color: #005B96;
-    --hover-light-color: rgb(248, 244, 26);
-    --main-light-color: rgb(208, 230, 251);
-    --text-light-color: #555;
-
-    /*Dark*/
-    --background-dark-color: #333;
-    --circle-dark-color: #F2C6B6;
-    --dark-dark-color: #BF1F2C;
-    --hover-dark-color: #D99B84;
-    --main-dark-color: #B33646;
-    --text-dark-color: #fff;
-}
+@import './__variables.css';
+@import './general.css';
 /*//////////////////////////////////////////////
 GENERAL
 //////////////////////////////////////////////*/
 
-* {
-    box-sizing: 0;
-    margin: 0;
-    outline: none;
-    padding: 0;
-}
 
-html {
-    font-size: 10px;
-    font-family: 'Roboto', sans-serif;
-}
-
-body {
-    font-size: 16px;
-}
 
 .light-mode {
-    background-color: var(--background-light-color);
+    background-color: var(--white);
     color: var(--text-light-color);
 }
 
-abbr {
-    text-decoration: none;
-}
-
-a, a:visited {
-    color: inherit;
-    text-decoration: none;
-}
 
 header, main, footer {
     align-items: center;
@@ -65,7 +27,7 @@ HEADER
     align-items: center;
     background-color: var(--dark-light-color);
     border-radius: 4px;
-    color: var(--background-light-color);
+    color: var(--white);
     display: flex;
     font-family: "Lobster", serif;
     height: 6.5rem;
@@ -114,16 +76,31 @@ tr {
     position: relative;
 }
 
+tbody tr::before {
+    background-color: var(--lighten-black);
+    bottom: 0.5rem;
+    color: var(--white);
+    content: "Apri la pagina di dettaglio";
+    display: none;
+    font-size: 1rem;
+    left: 4rem;
+    padding: 0.1rem 0.3rem;
+    position: absolute;
+    width: 30%;
+}
+
 .tbody-light-mode tr:hover {
     height: 7.4rem;
     background-color: var(--hover-light-color) !important;
 }
 
-
 tr:hover .circle-id {
     background-color: var(--hover-light-color);
 }
 
+tr:hover::before {
+    display: inline-block;
+}
 
 .tbody-light-mode tr:nth-child(odd) {
     background-color: var(--main-light-color);
@@ -149,7 +126,6 @@ th {
     justify-content: center;
     width: 2.4rem;
 }
-
 
 .circle-id,.icon-container-sm a {
     font-weight: bold;
@@ -186,7 +162,7 @@ GENERAL DARK MODE
 //////////////////////////////////////////////*/
 
 .dark-mode {
-    background-color: var(--background-dark-color);
+    background-color: var(--lighten-black);
     color: var(--text-dark-color);
 }
 
@@ -223,11 +199,11 @@ tr:hover .circle-id-dark-mode {
 
 .circle-id-dark-mode {
     background-color: var(--circle-dark-color);
-    color: var(--background-dark-color);
+    color: var(--lighten-black);
 }
 
 .btn-dark {
-    color: var(--background-light-color);
+    color: var(--white);
 }
 
 /*//////////////////////////////////////////////
