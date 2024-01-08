@@ -1,2 +1,100 @@
 @import '../__variables.css';
 @import '../general.css';
+
+header h1 {
+    font-size: 4.4rem;
+    font-family: 'Lobster', serif;
+}
+.card-container {
+    background-color: var(--dark-light-color);
+    border-radius: 16px;
+    color: var(--white);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 0.45fr 1fr;
+    margin: 9.6rem 9.6rem;
+    padding: 3.2rem;
+    max-width: 100%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr;
+}
+
+address {
+    display: grid;
+    grid-template-columns: 0.65fr 1fr;
+    gap: 1.2rem;
+    padding: 0 0 0 1.2rem ;
+}
+
+.personal-img {
+    border-right: 2px solid var(--lighten-black);
+    border-bottom: 2px solid var(--lighten-black);
+    height: 85%;
+    max-width: 100%;
+}
+
+section h5 {
+    margin: 2rem 0;
+}
+
+address section div {
+    align-items: center;
+    background-color: var(--main-light-darken-color);
+    border-radius: 6px;
+    display: flex;
+    height: 5.4rem;
+    margin: 2rem 1.2rem 2rem 0;
+    padding: 0 2.4rem;
+    max-width: 100%;
+}
+
+address section div a {
+    cursor: pointer;
+    font-size: 1.4rem;
+    text-decoration: underline;
+    margin-left: 2.4rem;
+}
+
+address section p {
+
+    margin-bottom: 2.4rem;
+}
+
+section h5 {
+    font-family: 'Lobster', serif;
+    font-size: 2rem;
+}
+
+.bio-section {
+    background-color: var(--white);
+    border: 2px solid var(--lighten-black);
+    border-radius: 5px;
+    color: var(--dark-light-color);
+    display: grid;
+    margin-right: 5.4rem;
+    padding: 0 3.2rem 0 1rem;
+}
+
+.bio-section h5 {
+    margin: 1.2rem 0 2.2rem 0;
+}
+
+.bio-section p {
+    font-family: 'Lobster',serif;
+    margin-bottom: 2.4rem;
+}
+
+@media (max-width: 30em) {
+    .card-container{
+        grid-template-columns: 1fr;  
+        margin: 0;
+    }
+
+    address {
+        grid-template-columns: 1fr;
+    }
+}
