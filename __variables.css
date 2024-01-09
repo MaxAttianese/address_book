@@ -2,18 +2,17 @@
 
     /*Light*/
     --white: #fff;
-    --circle-light-color: rgb(249, 205, 7);
-    --dark-light-color: #005B96;
-    --hover-light-color: rgb(248, 244, 26);
-    --main-light-color: rgb(208, 230, 251);
-    --main-light-darken-color: rgb(97, 173, 244);
-    --text-light-color: #555;
+    --accent-light-mode: rgb(249, 205, 7);
+    --third-main-light-mode: #005B96;
+    --hover-light-mode: rgb(248, 244, 26);
+    --main-light-mode: rgb(208, 230, 251);
+    --second-main-light-mode: rgb(97, 173, 244);
 
     /*Dark*/
     --lighten-black: #333;
-    --circle-dark-color: #F2C6B6;
-    --dark-dark-color: #BF1F2C;
-    --hover-dark-color: #D99B84;
-    --main-dark-color: #B33646;
-    --text-dark-color: #fff;
+    --accent-dark-mode: #F2C6B6;
+    --second-main-dark-mode: #BF1F2C;
+    --hover-dark-mode: #D99B84;
+    --main-dark-mode: #B33646;
+
 }

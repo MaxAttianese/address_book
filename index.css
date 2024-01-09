@@ -4,14 +4,6 @@
 GENERAL
 //////////////////////////////////////////////*/
 
-
-
-.light-mode {
-    background-color: var(--white);
-    color: var(--text-light-color);
-}
-
-
 header, main, footer {
     align-items: center;
     display: flex;
@@ -25,7 +17,7 @@ HEADER
 
 .title-container {
     align-items: center;
-    background-color: var(--dark-light-color);
+    background-color: var(--third-main-light-mode);
     border-radius: 4px;
     color: var(--white);
     display: flex;
@@ -39,7 +31,7 @@ HEADER
 
 .icon-container {
     align-items: center;
-    background-color: var(--text-dark-color);
+    background-color: var(--white);
     border-radius: 4px;
     font-size: 2.4rem;
     display: flex;
@@ -49,7 +41,7 @@ HEADER
 }
 
 .icon-container i {
-    color: var(--dark-light-color);
+    color: var(--third-main-light-mode);
 }
 
 /*//////////////////////////////////////////////    
@@ -57,7 +49,7 @@ MAIN
 //////////////////////////////////////////////*/
 
 .table-border {
-    border: 2px solid var(--main-light-color);
+    border: 2px solid var(--second-main-light-mode);
     border-radius: 11px;
     margin: 0 2.4rem;
     overflow: hidden;
@@ -74,6 +66,7 @@ tr {
     grid-template-columns: 1fr 1fr 1fr;
     height: 4.8rem;
     position: relative;
+    transition: all 300ms;
 }
 
 tbody tr::before {
@@ -89,21 +82,21 @@ tbody tr::before {
     width: 30%;
 }
 
-.tbody-light-mode tr:hover {
+.tbody-light tr:hover {
     height: 7.4rem;
-    background-color: var(--hover-light-color) !important;
+    background-color: var(--hover-light-mode) !important;
 }
 
 tr:hover .circle-id {
-    background-color: var(--hover-light-color);
+    background-color: var(--hover-light-mode);
 }
 
 tr:hover::before {
     display: inline-block;
 }
 
-.tbody-light-mode tr:nth-child(odd) {
-    background-color: var(--main-light-color);
+.tbody-light tr:nth-child(odd) {
+    background-color: var(--main-light-mode);
 }
 
 
@@ -119,7 +112,7 @@ th {
 
 .circle-id {
     align-items: center;
-    background-color: var(--circle-light-color);
+    background-color: var(--accent-light-mode);
     border-radius: 50%;
     display: flex;
     height: 2.4rem;
@@ -139,71 +132,41 @@ footer {
     gap: 0.4rem;
 }
 
-/*//////////////////////////////////////////////    
-FOOTER
-//////////////////////////////////////////////*/
-
-aside {
-    display: flex;
-    justify-content: center;
-    margin-top: 4.8rem;
-}
-
-aside button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 4.8rem;
-}
-
-
-/*//////////////////////////////////////////////    
-GENERAL DARK MODE
-//////////////////////////////////////////////*/
-
-.dark-mode {
-    background-color: var(--lighten-black);
-    color: var(--text-dark-color);
-}
 
 /*//////////////////////////////////////////////
 HEADER DARK MODE
 //////////////////////////////////////////////*/
 
-.title-container-dark-mode {
-    background-color: var(--dark-dark-color);
+.title-container-dark {
+    background-color: var(--second-main-dark-mode);
 }
 
-.icon-container-dark-mode i {
-    color: var(--dark-dark-color);
+.icon-container-dark i {
+    color: var(--second-main-dark-mode);
 }
 
 /*//////////////////////////////////////////////
 MAIN DARK MODE
 //////////////////////////////////////////////*/
 
-.table-border-dark-mode {
-    border: 2px solid var(--main-dark-color);
+.table-border-dark {
+    border: 2px solid var(--main-dark-mode);
 }
 
-.tbody-dark-mode tr:hover {
-    background-color: var(--hover-dark-color) !important;
+.tbody-dark tr:hover {
+    background-color: var(--hover-dark-mode) !important;
 }
 
-tr:hover .circle-id-dark-mode {
-    background-color: var(--hover-dark-color) !important;
+tr:hover .circle-id-dark {
+    background-color: var(--hover-dark-mode) !important;
 }
-.tbody-dark-mode tr:nth-child(odd) {
-    background-color: var(--main-dark-color);
+.tbody-dark tr:nth-child(odd) {
+    background-color: var(--main-dark-mode);
 }
 
-.circle-id-dark-mode {
-    background-color: var(--circle-dark-color);
+.circle-id-dark {
+    background-color: var(--accent-dark-mode);
     color: var(--lighten-black);
-}
-
-.btn-dark {
-    color: var(--white);
 }
 
 /*//////////////////////////////////////////////
