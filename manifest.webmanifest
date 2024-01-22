@@ -8,7 +8,7 @@
         {
             "src" : "./img/favicon/favicon-address-book Android-big",
             "type": "image/png",
-            "sizes": "192X192"
+            "sizes": "512X512"
         }
     ]
 }

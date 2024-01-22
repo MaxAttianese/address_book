@@ -66,17 +66,16 @@ address section div a:visited {
     cursor: pointer;
     font-size: 1.4rem;
     margin-left: 1.6rem;
+    margin-right: 1.6rem;
     text-decoration: underline;
 }
 
 address section div a:hover,
 address section div a:active {
     color: var(--third-main-light-mode);
-    font-weight: bold;
 }
 
 address section p {
-
     margin-bottom: 2.4rem;
 }
 
