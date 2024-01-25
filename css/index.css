@@ -11,39 +11,6 @@ header, main, footer {
     margin-bottom: 1.2rem;
 }
 
-/*//////////////////////////////////////////////
-HEADER
-//////////////////////////////////////////////*/
-
-.title-container {
-    align-items: center;
-    background-color: var(--third-main-light-mode);
-    border-radius: 4px;
-    color: var(--white);
-    display: flex;
-    font-family: "Lobster", serif;
-    height: 6.5rem;
-    gap: 0.8rem;
-    justify-content: center;
-    margin: 1.2rem;
-    width: 45rem; 
-}
-
-.icon-container {
-    align-items: center;
-    background-color: var(--white);
-    border-radius: 4px;
-    font-size: 2.4rem;
-    display: flex;
-    height: 3.2rem;
-    justify-content: center;
-    width: 3.2rem;
-}
-
-.icon-container i {
-    color: var(--third-main-light-mode);
-}
-
 /*//////////////////////////////////////////////    
 MAIN
 //////////////////////////////////////////////*/
@@ -132,18 +99,6 @@ footer {
     gap: 0.4rem;
 }
 
-
-/*//////////////////////////////////////////////
-HEADER DARK MODE
-//////////////////////////////////////////////*/
-
-.title-container-dark {
-    background-color: var(--second-main-dark-mode);
-}
-
-.icon-container-dark i {
-    color: var(--second-main-dark-mode);
-}
 
 /*//////////////////////////////////////////////
 MAIN DARK MODE

@@ -1,17 +1,17 @@
-@import '../__variables.css';
-@import '../general.css';
+@import '../../css/__variables.css';
+@import '../../css/general.css';
 
 /*//////////////////////////////////////////////
 HEADER
 //////////////////////////////////////////////*/
 
-header {
-    width: 100%;
-}
-
-header h1 {
+h1 {
     font-size: 4.4rem;
     font-family: 'Lobster', serif;
+}
+
+h2 {
+    font-size: 3.2rem;
 }
 
 /*//////////////////////////////////////////////
@@ -24,7 +24,7 @@ MAIN - ADDRESS
     display: grid;
     gap: 1rem;
     grid-template-columns: 0.5fr 1fr;
-    margin: 9.6rem 26rem;
+    margin: 3.2rem 26rem;
     padding: 3.2rem;
     max-width: 100%;
 }
@@ -45,8 +45,8 @@ address {
 .personal-img {
     border-right: 2px solid var(--lighten-black);
     border-bottom: 2px solid var(--lighten-black);
-    height: 85%;
-    max-width: 100%;
+    height: 75%;
+    width: 100%;
 }
 
 address section div {
@@ -76,6 +76,10 @@ address section div a:active {
 }
 
 address section p {
+    margin-bottom: 2.4rem;
+}
+
+ul li {
     margin-bottom: 2.4rem;
 }
 
@@ -127,6 +131,10 @@ DARK MODE
     border: 2px solid var(--white);
     color: var(--hover-dark-mode);
 }
+
+aside {
+    margin-top: 0;
+}
 /*//////////////////////////////////////////////
 MEDIA QUERIES
 //////////////////////////////////////////////*/
@@ -139,7 +147,7 @@ MEDIA QUERIES
     .personal-img {
         width: 50%;
     }
-    header h1 {
+    h1 {
         font-size: 9.6rem;
         text-align: center;
     }
@@ -200,7 +208,7 @@ MEDIA QUERIES
 }
 
 @media (max-width: 40em) {
-    header h1 {
+    h1 {
         font-size: 5.4rem;
         margin-top: 2.4rem;
     }
@@ -215,7 +223,7 @@ MEDIA QUERIES
         font-size: 1.2rem;
     }
 
-    header h1 {
+    h1 {
         font-size: 3.2rem;
         text-align: center;
     }
