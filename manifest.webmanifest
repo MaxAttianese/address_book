@@ -1,12 +1,12 @@
 {
     "icons": [
         {
-            "src" : "./img/favicon/favicon-address-book Android-small",
+            "src" : "./img/favicon/favicon-address-book-Android-small",
             "type": "image/png",
             "sizes": "192X192"
         },
         {
-            "src" : "./img/favicon/favicon-address-book Android-big",
+            "src" : "./img/favicon/favicon-address-book-Android-big",
             "type": "image/png",
             "sizes": "512X512"
         }

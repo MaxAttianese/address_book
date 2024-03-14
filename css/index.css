@@ -149,7 +149,8 @@ MEDIA QUERIES - SMARTPHONE VIEW
 
 .icon-container-sm {
     align-items: center;
-    background-image: url('./img/favicon/favicon-address-book\ desktop.png');
+    background-image: url('../img/favicon/favicon-address-book-desktop.png');
+    background-repeat: no-repeat;
     background-size: contain;
     border-radius: 50%;
     color: var(--lighten-black);
