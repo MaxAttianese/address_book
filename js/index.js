@@ -1,28 +1,19 @@
-const btnSwitchColor = document.getElementById("changeStyleMode");
+let button = document.getElementById("change-theme");
 
-const titleContainer = document.getElementsByClassName("title-container");
-const iconContainer = document.getElementsByClassName("icon-container");
-const tableBorder = document.getElementsByClassName("table-border");
-const tBody = document.getElementsByClassName("tbody-light");
-const circlesId = document.getElementsByClassName("circle-id");
-const cardsPeople = document.getElementsByClassName("card-people");
-const linkContainer = document.getElementsByClassName("link-container");
+if (sessionStorage.getItem("theme") == "light") {
+  document.body.classList.add("light");
+} else if (sessionStorage.getItem("theme") == "dark") {
+  document.body.classList.add("dark");
+} else {
+  document.body.classList.add("light");
+}
 
-btnSwitchColor.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    titleContainer[0].classList.toggle("title-container-dark");
-    iconContainer[0].classList.toggle("icon-container-dark");
-    tableBorder[0].classList.toggle("table-border-dark");
-    tBody[0].classList.toggle("tbody-dark");
-    for (let i = 0; i < circlesId.length; i++) {
-        circlesId[i].classList.toggle("circle-id-dark"); 
+button.addEventListener("click", ()=>{
+    if(document.body.classList.contains("light")) {
+        document.body.classList.replace("light", "dark");
+        sessionStorage.setItem("theme", "dark");
+    } else {
+        document.body.classList.replace("dark", "light");
+        sessionStorage.setItem("theme", "light");
     }
-    for (let i = 0; i < cardsPeople.length; i++) {
-        cardsPeople[i].classList.toggle("card-people-dark");
-    }
-    for (let i = 0; i < linkContainer.length; i++) {
-        linkContainer[i].classList.toggle("link-container-dark");
-    }
-    btnSwitchColor.classList.toggle("btn-dark");
 })
-

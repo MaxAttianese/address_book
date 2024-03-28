@@ -1,19 +1,40 @@
 :root {
+  --white: #fff;
 
-    /*Light*/
-    --white: #fff;
-    --accent-light-mode: rgb(249, 205, 7);
-    --third-main-light-mode: #005B96;
-    --hover-light-mode: rgb(248, 244, 26);
-    --main-light-mode: rgb(208, 230, 251);
-    --second-main-light-mode: rgb(97, 173, 244);
+  --blue-300: #d0e6fbd9;
+  --blue-400: #7eb0cc;
+  --blue-500: #005b96;
 
-    /*Dark*/
-    --lighten-black: #333;
-    --accent-dark-mode: #F2C6B6;
-    --second-main-dark-mode: #BF1F2C;
-    --hover-dark-mode: #D99B84;
-    --main-dark-mode: #B33646;
+  --yellow-500: #f8f41a;
+  --yellow-800: #f9cd07;
 
+  --orange-300: #de7c47;
+  --orange-400: #eb493f;
+  --orange-500: #f56742;
+
+  --black: #333;
 }
 
+.light {
+  --bg: var(--white);
+  --title-color: var(--white);
+  --text-color: var(--black);
+  --primary-color: var(--blue-500);
+  --primary-color-middle: var(--blue-400);
+  --primary-color-light: var(--blue-300);
+  --secondary-color: var(--yellow-800);
+  --secondary-color-light: var(--yellow-500);
+  --change-theme-color: var(--orange-300);
+}
+
+.dark {
+  --bg: var(--black);
+  --title-color: var(--white);
+  --text-color: var(--white);
+  --primary-color: var(--orange-500);
+  --primary-color-middle: var(--orange-400);
+  --primary-color-light: var(--orange-300);
+  --secondary-color: var(--yellow-800);
+  --secondary-color-light: var(--yellow-500);
+  --change-theme-color: var(--blue-500);
+}

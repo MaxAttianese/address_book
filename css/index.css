@@ -18,8 +18,8 @@ MAIN
 //////////////////////////////////////////////*/
 
 .table-border {
-  border: 2px solid var(--second-main-light-mode);
-  border-radius: 11px;
+  border: 0.2rem solid var(--primary-color-light);
+  border-radius: 1.1rem;
   margin: 0 2.4rem;
   overflow: hidden;
   width: 40rem;
@@ -40,34 +40,20 @@ tr {
   transition: all 300ms;
 }
 
-tbody tr::before {
-  background-color: var(--lighten-black);
-  bottom: 0.5rem;
-  color: var(--white);
-  content: "Apri la pagina di dettaglio";
-  display: none;
-  font-size: 1rem;
-  left: 4rem;
-  padding: 0.1rem 0.3rem;
-  position: absolute;
-  width: 30%;
-}
-
-.tbody-light tr:hover {
-  height: 7.4rem;
-  background-color: var(--hover-light-mode) !important;
-}
-
 tr:hover .circle-id {
-  background-color: var(--hover-light-mode);
+  align-items: center;
+  background-color: var(--secondary-color-light);
+  display: flex;
+  justify-content: center;
 }
 
-tr:hover::before {
-  display: inline-block;
+tbody tr:nth-child(odd) {
+  background-color: var(--primary-color-light);
 }
 
-.tbody-light tr:nth-child(odd) {
-  background-color: var(--main-light-mode);
+tbody tr:hover {
+  height: 7.4rem;
+  background-color: var(--secondary-color-light);
 }
 
 th,
@@ -77,22 +63,31 @@ td {
   overflow: hidden;
   padding: 0 2.4rem;
   width: 100%;
-  white-space: nowrap;
+}
+
+th div,
+td div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 th {
   text-align: start;
 }
 
-.tbody-light tr:hover td {
+tbody tr:hover div {
+  display: -webkit-box;
   overflow: unset;
-  white-space: unset;
-  word-break: break-all;
+  text-overflow: unset;
+  word-break: break-word;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .circle-id {
   align-items: center;
-  background-color: var(--accent-light-mode);
+  background-color: var(--secondary-color);
   border-radius: 50%;
   display: flex;
   height: 2.4rem;
@@ -114,30 +109,6 @@ footer {
 }
 
 /*//////////////////////////////////////////////
-MAIN DARK MODE
-//////////////////////////////////////////////*/
-
-.table-border-dark {
-  border: 2px solid var(--main-dark-mode);
-}
-
-.tbody-dark tr:hover {
-  background-color: var(--hover-dark-mode) !important;
-}
-
-tr:hover .circle-id-dark {
-  background-color: var(--hover-dark-mode) !important;
-}
-.tbody-dark tr:nth-child(odd) {
-  background-color: var(--main-dark-mode);
-}
-
-.circle-id-dark {
-  background-color: var(--accent-dark-mode);
-  color: var(--lighten-black);
-}
-
-/*//////////////////////////////////////////////
 MEDIA QUERIES - SMARTPHONE VIEW
 //////////////////////////////////////////////*/
 .card-section {
@@ -147,17 +118,20 @@ MEDIA QUERIES - SMARTPHONE VIEW
 
 .card-people {
   align-items: center;
-  background-color: var(--third-main-light-mode);
-  border-radius: 8px;
-  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 0.8rem;
+  color: var(--title-link-color);
   display: flex;
   justify-self: center;
   padding: 1.2rem 2.4rem;
-  width: 85%;
+  width: 100%;
 }
 
 .card-people:hover {
-  background-color: var(--second-main-light-mode);
+  background-color: var(--primary-color-light);
+  box-shadow: 0.5rem 0.5rem 0.8rem var(--text-color);
+  transform: scale(1.1,1.1);
+  transition: all 200ms;
 }
 
 .icon-container-sm {
@@ -166,9 +140,10 @@ MEDIA QUERIES - SMARTPHONE VIEW
   background-repeat: no-repeat;
   background-size: contain;
   border-radius: 50%;
-  color: var(--lighten-black);
+  color: var(--text-color);
   display: flex;
   height: 4.4rem;
+  object-fit: cover;
   justify-content: center;
   margin-right: 1.2rem;
   width: 4.4rem;
@@ -176,9 +151,9 @@ MEDIA QUERIES - SMARTPHONE VIEW
 
 .link-container {
   align-items: center;
-  background-color: var(--third-main-light-mode);
+  background-color: var(--primary-color-light);
   border-radius: 50%;
-  color: var(--white);
+  color: var(--text-color);
   display: none;
   font-size: 3.2rem;
   font-weight: 900;
@@ -217,21 +192,6 @@ MEDIA QUERIES - SMARTPHONE VIEW
 
   .card-people {
     padding: 1.6rem;
+    width: 75%;
   }
-}
-
-/*//////////////////////////////////////////////
-DARK MODE - SMARTPHONE VIEW
-//////////////////////////////////////////////*/
-
-.card-people-dark {
-  background-color: var(--second-main-dark-mode);
-}
-
-.card-people-dark:hover {
-  background-color: var(--hover-dark-mode) !important;
-}
-
-.link-container-dark {
-  background-color: var(--second-main-dark-mode) !important;
 }

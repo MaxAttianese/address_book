@@ -1,239 +1,227 @@
-@import '../../css/__variables.css';
-@import '../../css/general.css';
+@import "../../css/__variables.css";
+@import "../../css/general.css";
 
 /*//////////////////////////////////////////////
 HEADER
 //////////////////////////////////////////////*/
 
-h1 {
-    font-size: 4.4rem;
-    font-family: 'Lobster', serif;
-}
-
 h2 {
-    font-size: 3.2rem;
+  font-size: 6.4rem;
+  font-family: "Lobster", serif;
 }
 
 /*//////////////////////////////////////////////
 MAIN - ADDRESS
 //////////////////////////////////////////////*/
 .card-container {
-    background-color: var(--third-main-light-mode);
-    border-radius: 16px;
-    color: var(--white);
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 0.5fr 1fr;
-    margin: 3.2rem 26rem;
-    padding: 3.2rem;
-    max-width: 100%;
+  background-color: var(--primary-color);
+  border-radius: 1.6rem;
+  color: var(--white);
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  gap: 2rem;
+  margin: 3.2rem 26rem;
+  padding: 3.2rem;
+  max-width: 100%;
 }
 
 .card-body {
-    display: flex;
-    flex-direction: column;
-    grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 address {
-    display: grid;
-    grid-template-columns: 0.65fr 1fr;
-    gap: 1.2rem;
-    padding: 0 0 0 1.2rem ;
+  display: flex;
+  gap: 5rem;
 }
 
 .personal-img {
-    border-right: 2px solid var(--lighten-black);
-    border-bottom: 2px solid var(--lighten-black);
-    height: 75%;
-    width: 100%;
+  border-right: 0.2rem solid var(--text-color);
+  border-bottom: 0.2rem solid var(--text-color);
+  height: 80%;
+  object-fit: cover;
+  width: 100%;
 }
 
 address section div {
-    align-items: center;
-    background-color: var(--second-main-light-mode);
-    border-radius: 6px;
-    display: flex;
-    height: 5.4rem;
-    margin: 2rem 1.2rem 2rem 0;
-    padding: 0 2.4rem 0 2.4rem;
-    max-width: 100%;
+  align-items: center;
+  background-color: var(--primary-color-middle);
+  border-radius: 0.6rem;
+  display: flex;
+  gap: 2rem;
+  height: 5.4rem;
+  margin: 2rem 1.2rem 2rem 0;
+  padding: 0 2.4rem 0 2.4rem;
+  width: 100%;
+}
+
+address section div strong {
+  display: inline-block;
+  width: 6rem;
 }
 
 address section div a:link,
 address section div a:visited {
-    color: var(--white);
-    cursor: pointer;
-    font-size: 1.4rem;
-    margin-left: 1.6rem;
-    margin-right: 1.6rem;
-    text-decoration: underline;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.4rem;
+  text-decoration: underline;
 }
 
 address section div a:hover,
 address section div a:active {
-    color: var(--third-main-light-mode);
+  color: var(--secondary-color);
 }
 
 address section p {
-    margin-bottom: 2.4rem;
+  margin-bottom: 2.4rem;
 }
 
-ul li {
-    margin-bottom: 2.4rem;
+ul {
+  display: grid;
+  row-gap: 3.5rem;
 }
 
 section h5 {
-    font-family: 'Lobster', serif;
-    font-size: 2.4rem;
-    margin: 2rem 0;
+  font-family: "Lobster", serif;
+  font-size: 2.4rem;
+  margin: 2rem 0;
 }
 
 .bio-section {
-    background-color: var(--white);
-    border: 2px solid var(--lighten-black);
-    border-radius: 5px;
-    color: var(--third-main-light-mode);
-    display: grid;
-    margin-right: 5.4rem;
-    padding: 0 3.2rem 0 1rem;
+  background-color: var(--bg);
+  border: 0.2rem solid var(--text-color);
+  border-radius: 0.5rem;
+  color: var(--primary-color);
+  height: 100%;
+  padding: 0 3.2rem 0 1rem;
 }
 
 .bio-section h5 {
-    margin: 1.2rem 0 2.2rem 0;
+  margin: 1.2rem 0 2.2rem 0;
 }
 
 .bio-section p {
-    font-family: 'Lobster',serif;
-    margin-bottom: 2.4rem;
+  font-family: "Lobster", serif;
+  margin-bottom: 2.4rem;
 }
 
-/*//////////////////////////////////////////////
-DARK MODE
-//////////////////////////////////////////////*/
-.card-container-dark {
-    background-color: var(--second-main-dark-mode);
-}
-.personal-img-dark {
-    border-right: 2px solid var(--white);
-    border-bottom: 2px solid var(--white);
-}
-.bg-address-a-dark {
-    background-color: var(--hover-dark-mode);
-}
-.bg-address-a-dark a:hover,
-.bg-address-a-dark a:hover {
-    color: var(--second-main-dark-mode);
-}
-
-.bio-section-dark {
-    background-color: var(--lighten-black);
-    border: 2px solid var(--white);
-    color: var(--hover-dark-mode);
-}
-
-aside {
-    margin-top: 0;
-}
 /*//////////////////////////////////////////////
 MEDIA QUERIES
 //////////////////////////////////////////////*/
 
-@media (max-width: 92em) {
-    body {
-        font-size: 2rem;
-    }
+@media (max-width: 90em) {
+  .card-container {
+    gap: 0;
+    grid-template-columns: 1fr;
+    padding-top: 0;
+  }
 
-    .personal-img {
-        width: 50%;
-    }
-    h1 {
-        font-size: 9.6rem;
-        text-align: center;
-    }
+  .personal-img {
+    align-self: center;
+    object-fit: fill;
+    width: 40%;
+    justify-self: center;
+  }
 
-    .card-container{
-        display: flex;
-        margin: 9.6rem 1.2rem;
-    }
+  address section div {
+    gap: 1rem;
+  }
 
-    .card-content-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
+  address {
+    justify-content: space-evenly;
+  }
 
-    .card-body {
-        row-gap: 6.4rem;
-    }
+  .card-content div h2 {
+    font-size: 7rem;
+    text-align: center;
+  }
 
-    address {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    address section div {
-        margin: 2rem 1.2rem 2rem 0;
-        padding: 0 3rem 0 1.2rem;
-    }
-
-    address section div a:link {
-        font-size: 1.6rem;
-    }
-
-    section h5 {
-        font-size: 3rem;
-    }
-
-    .bio-section {
-        margin: 0;
-        padding: 0 0 0 1rem;
-    }
-
-    .bio-section p {
-        font-size: 1.8rem;
-    }
+  .bio-section {
+    margin: 0 1rem;
+  }
 }
 
-@media (max-width: 78em) {
-    .card-container{
-        flex-direction: column;
-    }
-
-    .personal-img {
-        align-self: center;
-        width: 50%;
-    }
-
+@media (max-width: 71em) {
+  .card-container {
+    margin: 3.2rem 13rem;
+  }
+  address {
+    gap: 2.5rem;
+  }
 }
 
-@media (max-width: 40em) {
-    h1 {
-        font-size: 5.4rem;
-        margin-top: 2.4rem;
-    }
+@media (max-width: 65em) {
+  .card-container {
+    margin: 3.2rem 6.5rem;
+  }
+  address {
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+  }
 
-    address {
-        flex-direction: column;
-    }
+  address h5 {
+    text-align: center;
+  }
+
+  .personal-img {
+    width: 80%;
+  }
 }
 
-@media (max-width: 27em) {
-    body {
-        font-size: 1.2rem;
-    }
+@media (max-width: 35em) {
+  .card-container {
+    margin: 3.2rem 4rem;
+  }
 
-    h1 {
-        font-size: 3.2rem;
-        text-align: center;
-    }
+  address section div {
+    margin: 2rem 0 2rem 0;
+  }
+  .personal-img {
+    width: 85%;
+  }
 
-    address section div a:link {
-        font-size: 1rem;
-        margin-left: 1rem;
-    }
+  .card-content div h2 {
+    font-size: 3.3rem;
+  }
 
-    section h5 {
-        font-size: 1.8rem;
-    }
+  .bio-section {
+    margin: 0;
+  }
+
+  .card-content div h2 {
+    font-size: 4.4rem;
+  }
+}
+
+@media (max-width: 28em) {
+  .card-container {
+    margin: 3.2rem 2rem;
+  }
+
+    .card-content div h2 {
+    font-size: 3.4rem;
+  }
+}
+
+@media (max-width: 25em) {
+  .card-container {
+    margin: 3.2rem 1rem;
+    padding:0 1.5rem 3.2rem 1.5rem;
+  }
+
+  address section div {
+    flex-direction: column;
+    padding-top: 0.3rem;
+  }
+
+  address section div strong {
+    display: inline-block;
+    width: 3rem;
+  }
+
+  .personal-img {
+    width: 100%;
+  }
 }
